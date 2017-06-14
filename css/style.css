@@ -1,0 +1,44 @@
+body {
+	text-align: center;
+}
+
+.content {
+	margin-top: 100px;
+}
+
+.tip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted red;
+}
+
+.tip .tip_text {
+    visibility: hidden;
+    width: 180px;
+    background-color: #ff5722;
+    color: #fff;
+    text-align: left;
+    border-radius: 5px;
+    padding: 7px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%; 
+    margin-left: -105px;
+	margin-bottom: 10px;
+}
+
+.tip .tip_text::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ff5722 transparent transparent transparent;
+}
+
+.tip:hover .tip_text {
+    visibility: visible;
+	cursor: help;
+}
